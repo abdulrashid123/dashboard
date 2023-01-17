@@ -1,57 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { isMobile } from 'react-device-detect';
+import { Route, Link, Routes, BrowserRouter as Router, useNavigate} from 'react-router-dom' 
 import './App.css';
+import Bank from './pages/Bank';
+import Browser from './pages/Browser';
+import Home from './pages/Home';
+import QrCode from './pages/QrCode';
+import Statement from './pages/Statement';
+import RequireAuth from './RequireAuth';
 
 function App() {
   return (
+
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    
+    <Routes>
+      
+          <Route exact path ='/' element={<RequireAuth> < Home /></RequireAuth>}></Route>
+          <Route exact path ='/banks' element={<RequireAuth>< Bank /></RequireAuth>}></Route>
+          <Route exact path ='/statements' element={<RequireAuth>< Statement /></RequireAuth>}></Route>
+          <Route exact path ='/qrcode' element={isMobile ? <QrCode /> : <Browser text="Only allowed in Mobile"/>}></Route>
+
+          
+   </Routes>
+   </div>
+   </Router>
+
   );
 }
 

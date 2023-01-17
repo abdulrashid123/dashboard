@@ -1,0 +1,27 @@
+.autocomplete{
+    padding-left: 10px;
+    padding-top: 10px;
+    max-height: 150px;
+    overflow: auto;
+    background-color: bisque;
+}
+
+.autocomplete__item:hover{
+    cursor: pointer;
+}
+.bills{
+    display: flex;
+    align-items: center;
+}
+.modalHead{
+    display: flex;
+    flex-direction: column;
+}
+.autocomplete__label{
+    font-size: 20px;
+    padding: 5px;
+}
+.autocomplete__input{
+    width: 35px;
+    height: 20px;
+}

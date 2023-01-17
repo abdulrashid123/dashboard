@@ -1,0 +1,23 @@
+.customer{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+   justify-content: center;
+    max-height: 150px;
+    overflow: auto;
+    
+}
+
+#searchBox{
+    padding: 5px;
+    width:300px;
+    margin:5px;
+}
+.items:hover{
+    cursor: pointer;
+
+}
+.items{
+    margin: 5px;
+}

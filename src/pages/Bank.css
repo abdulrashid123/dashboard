@@ -1,0 +1,19 @@
+.gridContainer {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 30px;
+    
+}
+.no__result{
+    position: absolute;
+    top:45%;
+    left: 45%;
+}
+.loading__spinner{
+    position: absolute;
+    top:50%;
+    left: 50%;
+
+}

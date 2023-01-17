@@ -1,0 +1,29 @@
+.main{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress__div{
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    border: solid ;
+    text-align: center;
+    padding: 5px;
+}
+
+#dropdown-basic-button{
+    min-width: 200px;
+    max-width: 200px;
+}
+.upload{
+    margin: 10px;
+}
+.bar{
+    margin-top: 10px;
+    display: flex;
+    
+  }
